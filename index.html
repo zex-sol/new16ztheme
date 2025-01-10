@@ -67,9 +67,9 @@
         }
 
         .hero-text span {
-            color: #1e90ff; /* Blue color for ElizaOS */
+            color: #000000; /* Change text to black */
             font-weight: bold;
-            border-right: 0.7734375rem solid rgba(30, 144, 255, 0.8); /* Blue cursor */
+            border-right: 0.7734375rem solid rgba(0, 0, 0, 0.8); /* Change cursor to black */
             margin-right: 0.2rem; /* Cursor spacing */
             white-space: nowrap;
             overflow: hidden;
@@ -108,10 +108,10 @@
 
         @keyframes blinkFade {
             0%, 50% {
-                border-color: rgba(30, 144, 255, 1);
+                border-color: rgba(0, 0, 0, 1);
             }
             51%, 100% {
-                border-color: rgba(30, 144, 255, 0);
+                border-color: rgba(0, 0, 0, 0);
             }
         }
     </style>
@@ -128,7 +128,7 @@
                 span.addEventListener("animationend", () => {
                     setTimeout(() => {
                         span.style.animation = "none"; // Stop animation
-                        span.style.borderRight = "1.03125rem solid #1e90ff"; // Keep cursor visible
+                        span.style.borderRight = "1.03125rem solid #000000"; // Keep cursor visible
                         void span.offsetWidth; // Trigger reflow to ensure cursor remains
                         setTimeout(loopAnimation, 500); // Restart the loop
                     }, 3000); // Pause for 3 seconds after typing
